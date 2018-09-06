@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    /*further style list items
+    */
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.circle {
+	width: 0.9375em;
+	height: 0.9375em;
+	background: rgb(255, 255, 245);
+	-moz-border-radius: 0.3.125em;
+	-webkit-border-radius: 0.3.125em;
+    border-style: solid;
+    border-radius: 3.125em;
+    border-width: thin;
+    border-color: darkgrey;
+}

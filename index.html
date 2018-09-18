@@ -1,15 +1,43 @@
-<div id="myDiv" class="header">
-    <h2>To Do List</h2>
-    <input type="text" id="myInput" placeholder="New Task...">
-    <span onclick="newElement()" class="addBtn">Add</span>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To Do App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
 
-<div class="circle"></div>
+    <div id="myDiv" class="header">
+        <h2>To Do List</h2>
+        <input type="text" id="myInput" placeholder="New Task...">
+        <!-- TODO:
+        -Find images of neutral, yellow/orange, and red bubbles to use
+        -Use inline-block or other method to make items in this div align in a row
+        -Decide on Jquery or Bootstrap to simplify select list creation
+        -->
+        <div class="custom-select">
+            <select>
+                <option value=0>Set priority:</option>
+                <option value=1 class="circle-default">Normal</option>
+                <option value=2>Important</option>
+                <option value=3>Very Important</option>
+            </select>
+        </div>
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+    
+    <ul id="myUL">
+        <li>Feed the cat.</li>
+        <li>Mow the lawn.</li>
+        <li>Take medicine.</li>
+        <li>Fix car.</li>
+        <li>Buy clothes.</li>
+    </ul>
 
-<ul id="myUL">
-    <li>Feed the cat.</li>
-    <li>Mow the lawn.</li>
-    <li>Take medicine.</li>
-    <li>Fix car.</li>
-    <li>Buy clothes.</li>
-</ul>
+    <div class="circle-default"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

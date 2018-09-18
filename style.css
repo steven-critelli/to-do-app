@@ -3,30 +3,115 @@
 }
 
 ul {
-    margin: 0;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 0;
+    list-style-type: none;
 }
 
 ul li {
     cursor: pointer;
     position: relative;
-    /*further style list items
-    */
+    padding: 12px 8px 12px 40px;
+    background: ;
+    font-size: 18px;
+    transition: 0.2s;
 
+    /* Makes list items unselectable */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-.circle {
-	width: 0.9375em;
-	height: 0.9375em;
-	background: rgb(255, 255, 245);
-	-moz-border-radius: 0.3.125em;
-	-webkit-border-radius: 0.3.125em;
+ul li:nth-child {
+    background: ; /*add alternating color
+    */
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    
+
+}
+
+ul li:hover {
+    background: rgb(123, 207, 255);
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    background: slategrey;
+    color: /*TBD*/;
+}
+
+.close {
+    position: absolute;
+    border-style: solid;
+    border-width: medium;
+    border-color: #990000;
+    color: #e60000;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #bfbfbf;
+    color: #ffffff;
+}
+
+.header {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    color: white;
+    padding: 30px 40px;
+    background-color: #009900;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    float: left;
+    font-size: 1em;
+    padding: 10px;
+}
+
+.addBtn {
+    padding: 10px;
+    width: 15%;
+    background: lightgrey;
+    color: #555;
+    text-align: center;
+    font-size: 1em;
+    float: left;
+    cursor: pointer;
+    border-radius: 0;
+    transition: 0.2s;
+}
+
+.addBtn:hover {
+    background-color: darkgrey;
+}
+
+.circle-default {
+	width: 50px;
+	height: 50px;
+	background: rgb(79, 194, 13);
+	-moz-border-radius: 3.125em;
+	-webkit-border-radius: 3.125em;
     border-style: solid;
     border-radius: 3.125em;
-    border-width: thin;
+    border-width: medium;
     border-color: darkgrey;
 }

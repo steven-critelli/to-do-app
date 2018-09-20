@@ -7,6 +7,9 @@
 *Add click and drag to reorder
 *
 *sublists -- i.e. clean bathroom (click, submenu) --> wipe down counters, clean tub
+*
+*Set colored bubble to appear on priority selection, and reset to default on adding item
+*Set colored bubble of choice to appear on right side of created items
 */
 
 /******

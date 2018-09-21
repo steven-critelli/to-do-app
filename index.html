@@ -14,23 +14,27 @@
 </head>
 <body>
 
-    <div id="myDiv" class="header">
+    <div id="myDiv" class="header container-fluid">
         <h2>To Do List</h2>
-        <input type="text" id="myInput" placeholder="New Task...">
-        <!-- TODO:
-        -Find images of neutral, yellow/orange, and red bubbles to use
-        -Use inline-block or other method to make items in this div align in a row
-        -Decide on Jquery or Bootstrap to simplify select list creation
-        -->
-        <div class="custom-select">
-            <select>
-                <option value=0>Set priority:</option>
-                <option value=1 class="circle-default">Normal</option>
-                <option value=2>Important</option>
-                <option value=3>Very Important</option>
-            </select>
-        </div>
-        <span onclick="newElement()" class="addBtn">Add</span>
+        <!--<div class="container">-->
+            <div class="row">
+                <div class="col-lg-8 input-field"><input type="text" id="myInput" placeholder="New Task..."></div>
+                <!-- TODO:
+                -Find images of neutral, yellow/orange, and red bubbles to use
+                -Use inline-block or other method to make items in this div align in a row
+                -Decide on Jquery or Bootstrap to simplify select list creation
+                -->
+                <div class="col-lg-2 custom-select">
+                    <select>
+                        <option value=0>Set priority:</option>
+                        <option value=1 class="circle-default">Normal</option>
+                        <option value=2 class="circle-orange">Important</option>
+                        <option value=3 class="circle-red">Very Important</option>
+                    </select>
+                </div>
+                <div class="col-lg-2"><span onclick="newElement()" class="addBtn">Add</span></div>
+            </div>
+        <!--</div>-->
     </div>
     
     <ul id="myUL">

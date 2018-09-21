@@ -89,7 +89,7 @@ input {
 
 .addBtn {
     padding: 10px;
-    width: 15%;
+    width: 100%;
     background: lightgrey;
     color: #555;
     text-align: center;
@@ -114,4 +114,43 @@ input {
     border-radius: 3.125em;
     border-width: medium;
     border-color: darkgrey;
+}
+
+.circle-orange {
+	width: 50px;
+	height: 50px;
+	background: rgb(255, 123, 0);
+	-moz-border-radius: 3.125em;
+	-webkit-border-radius: 3.125em;
+    border-style: solid;
+    border-radius: 3.125em;
+    border-width: medium;
+    border-color: darkgrey;
+}
+
+.circle-red {
+	width: 50px;
+	height: 50px;
+	background: rgb(228, 14, 14);
+	-moz-border-radius: 3.125em;
+	-webkit-border-radius: 3.125em;
+    border-style: solid;
+    border-radius: 3.125em;
+    border-width: medium;
+    border-color: darkgrey;
+}
+
+.custom-select {
+    color: black;
+    float: left;
+    width: 100%;
+}
+
+.input-field {
+    width: 100%;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }

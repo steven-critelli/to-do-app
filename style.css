@@ -25,8 +25,7 @@ ul li {
 }
 
 ul li:nth-child {
-    background: ; /*add alternating color
-    */
+    background: ; /*possibly remove and replace with underline*/
 }
 
 ul li.checked::before {
@@ -148,9 +147,14 @@ input {
 
 .input-field {
     width: 100%;
+    color: black;
 }
 
 .row {
     margin-left: 0;
     margin-right: 0;
+}
+
+.container-width-head {
+    width: 40%;
 }

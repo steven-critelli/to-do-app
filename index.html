@@ -11,10 +11,12 @@
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" 
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <div id="myDiv" class="header container-fluid">
+    <div id="myDiv" class="header container-fluid container-width-head">
         <h2>To Do List</h2>
         <!--<div class="container">-->
             <div class="row">
@@ -25,11 +27,11 @@
                 -Decide on Jquery or Bootstrap to simplify select list creation
                 -->
                 <div class="col-lg-2 custom-select">
-                    <select>
-                        <option value=0>Set priority:</option>
-                        <option value=1 class="circle-default">Normal</option>
-                        <option value=2 class="circle-orange">Important</option>
-                        <option value=3 class="circle-red">Very Important</option>
+                    <select id="priority">
+                        <option value="unselected">Set priority:</option>
+                        <option value="normal" class="circle-default">Normal</option>
+                        <option value="important" class="circle-orange">Important</option>
+                        <option value="very-important" class="circle-red">Very Important</option>
                     </select>
                 </div>
                 <div class="col-lg-2"><span onclick="newElement()" class="addBtn">Add</span></div>
@@ -44,8 +46,6 @@
         <li>Fix car.</li>
         <li>Buy clothes.</li>
     </ul>
-
-    <div class="circle-default"></div>
 
     <script src="script.js"></script>
 </body>

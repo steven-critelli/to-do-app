@@ -13,7 +13,7 @@ ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: purple;
+    background: ;
     font-size: 18px;
     transition: 0.2s;
 
@@ -24,8 +24,8 @@ ul li {
     user-select: none;
 }
 
-ul li:nth-child(even) {
-    background: yellow;
+ul li:nth-child {
+    background: ; /*possibly remove and replace with underline*/
 }
 
 ul li.checked::before {
@@ -42,7 +42,7 @@ ul li:hover {
 ul li.checked {
     text-decoration: line-through;
     background: slategrey;
-    /*insert check icon*/
+    color: /*TBD*/;
 }
 
 .close {
@@ -105,8 +105,7 @@ input {
 
 .circle-default {
 	width: 50px;
-    height: 50px;
-    color: white;
+	height: 50px;
 	background: rgb(79, 194, 13);
 	-moz-border-radius: 3.125em;
 	-webkit-border-radius: 3.125em;
@@ -118,8 +117,7 @@ input {
 
 .circle-orange {
 	width: 50px;
-    height: 50px;
-    color: white;
+	height: 50px;
 	background: rgb(255, 123, 0);
 	-moz-border-radius: 3.125em;
 	-webkit-border-radius: 3.125em;
@@ -131,8 +129,7 @@ input {
 
 .circle-red {
 	width: 50px;
-    height: 50px;
-    color: white;
+	height: 50px;
 	background: rgb(228, 14, 14);
 	-moz-border-radius: 3.125em;
 	-webkit-border-radius: 3.125em;

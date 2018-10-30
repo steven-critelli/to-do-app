@@ -1,0 +1,174 @@
+*:not(select) {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(coffee-notepad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    font-family: 'Lobster', cursive;
+}
+
+ul {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    cursor: pointer;
+    position: inherit;
+    padding: 12px 8px 12px 40px;
+    background: #ffffe6;
+    font-size: 18px;
+    transition: 50ms;
+    border-bottom: 1px solid;
+    border-color: #b5aca0;
+
+    /* Makes list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child {
+    background: ; /*possibly remove and replace with underline*/
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    
+
+}
+
+ul li:hover {
+    background: #e8e7ce;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    background: slategrey;
+    color: /*TBD*/;
+}
+
+.close {
+    position: absolute;
+    color: #e60000;
+    right: 0.125em;
+    top: 0.125em;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #e60000;
+    color: #e60000;
+}
+
+.header {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    color: white;
+    padding: 30px 40px;
+    background-color: /*#423e3a;*/ #6b665f;
+    width: 40%
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 30em;;
+    font-size: 1em;
+    padding: 10px;
+}
+
+.addBtn {
+    padding-top: 0.85em;
+    padding-bottom: 0.85em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    background: lightgrey;
+    color: #555;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0;
+    transition: 0.2s;
+}
+
+.addBtn:hover {
+    background-color: darkgrey;
+}
+
+.select-default {
+	background: rgb(165, 245, 119);
+}
+
+.select-orange {
+    background: rgb(250, 173, 100);
+}
+
+.select-red {
+	background: rgb(247, 76, 76);
+}
+
+.custom-select {
+    display: flex;
+    color: black;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    overflow: hidden;
+    width: 9em;
+    height: 2.89em;
+    background: white url('icons8-expand-arrow-52.png') no-repeat 90% 50%;
+    background-size: 1em;
+}
+
+.custom-select select {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.input-field {
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sortable{
+    list-style-type: none;
+    overflow: auto;
+}
+
+.placeholder {
+    border: 1px dotted black; 
+    height: 2.8em;
+    background-color: #6b665f;
+    visibility: visible !important;
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+}

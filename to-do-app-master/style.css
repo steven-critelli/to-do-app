@@ -1,22 +1,38 @@
+/* TODO:
+See: .custom-select select
+.input
+*/
+
 *:not(select) {
     box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-image: url(coffee-notepad.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    background-color: black;
 }
 
 body {
     background-image: url(coffee-notepad.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 h2 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', 'cursive';
 }
 
 ul {
-    margin-left: 30%;
-    margin-right: 30%;
     padding: 0;
     list-style-type: none;
+    width: 100%
 }
 
 ul li {
@@ -36,32 +52,20 @@ ul li {
     user-select: none;
 }
 
-ul li:nth-child {
-    background: ; /*possibly remove and replace with underline*/
-}
-
-ul li.checked::before {
-    content: '';
-    position: absolute;
-    
-
-}
-
 ul li:hover {
     background: #e8e7ce;
 }
 
 ul li.checked {
     text-decoration: line-through;
-    background: slategrey;
-    color: /*TBD*/;
+    background: slategrey !important;
 }
 
 .close {
-    position: absolute;
+    position: relative;
     color: #e60000;
-    right: 0.125em;
-    top: 0.125em;
+    left: 0.25em;
+    bottom: 0.45em;
     padding: 12px 16px 12px 16px;
 }
 
@@ -71,13 +75,13 @@ ul li.checked {
 }
 
 .header {
-    margin-left: 20%;
-    margin-right: 20%;
+    /*margin-left: 20%;
+    margin-right: 20%;*/
     text-align: center;
     color: white;
-    padding: 30px 40px;
+    padding: 30px 0px;
     background-color: /*#423e3a;*/ #6b665f;
-    width: 40%
+    /*width: 40%*/
 }
 
 .header:after {
@@ -90,23 +94,22 @@ input {
     margin: 0;
     border: none;
     border-radius: 0;
-    width: 30em;;
+    width: 100%;
     font-size: 1em;
     padding: 10px;
 }
 
 .addBtn {
-    padding-top: 0.85em;
-    padding-bottom: 0.85em;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;
+    width: 100%;
     background: lightgrey;
     color: #555;
-    text-align: center;
     font-size: 1em;
     cursor: pointer;
     border-radius: 0;
     transition: 0.2s;
+    float: left;
 }
 
 .addBtn:hover {
@@ -129,16 +132,19 @@ input {
     display: flex;
     color: black;
     border: 1px solid #ccc;
-    font-size: 14px;
+    padding: 0px 0px;
+    font-size: 16px;
     overflow: hidden;
-    width: 9em;
-    height: 2.89em;
+    width: 100%;
+    height: 2.75em;
     background: white url('icons8-expand-arrow-52.png') no-repeat 90% 50%;
     background-size: 1em;
+    border-radius: 0px;
 }
 
 .custom-select select {
     background-color: white;
+    width: 100%;
     border: none;
     box-shadow: none;
     background: transparent;
@@ -171,4 +177,21 @@ input {
     -moz-transition-property: none;
     -o-transition-property: none;
     transition-property: none;
+}
+
+.test-border {
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+}
+
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
 }

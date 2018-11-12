@@ -2,52 +2,78 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>To Do App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+
+    <!-- jQuery-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
     
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" 
-    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
 
-    <div id="myDiv" class="header container-fluid container-width-head">
-        <h2>To Do List</h2>
-        <!--<div class="container">-->
-            <div class="flex-container">
-                <div class="input-field"><input type="text" id="myInput" placeholder="New Task..."></div>
-                <!-- TODO:
-                -Find images of neutral, yellow/orange, and red bubbles to use
-                -Use inline-block or other method to make items in this div align in a row
-                -Decide on Jquery or Bootstrap to simplify select list creation
-                -->
-                <div class="custom-select">
-                    <select id="priority">
-                        <option value="unselected">Set priority:</option>
-                        <!-- <option value="normal" class="select-default">Normal</option> -->
-                        <option value="important" class="select-orange">Important</option>
-                        <option value="very-important" class="select-red">Very Important</option>
-                    </select>
-                </div>
-                <div><span onclick="newElement()" class="addBtn">Add</span></div>
+    <div id="myDiv" class="header container">
+        <div class="justify-content-md-center">
+            <h2>To Do List</h2>
+
+            <div class="row no-gutters">
+                <!-- <div class="col-7"> -->
+                    <!-- <div class="row"> -->
+                        <div class="input-field col-md-5 offset-md-2"><input type="text" id="myInput" placeholder="New Task..."></div>
+                        <!-- TODO:
+                        -Find images of neutral, yellow/orange, and red bubbles to use
+                        -Use inline-block or other method to make items in this div align in a row
+                        -Decide on Jquery or Bootstrap to simplify select list creation
+                        -->
+                        <div class="custom-select col-md-2">
+                            <select id="priority">
+                                <option value="unselected">Set priority:</option>
+                                <!-- <option value="normal" class="select-default">Normal</option> -->
+                                <option value="important" class="select-orange">Important</option>
+                                <option value="very-important" class="select-red">Very Important</option>
+                            </select>
+                        </div>
+                        <div class="col-md-1"><span onclick="newElement()" class="addBtn">Add</span></div>
+                    <!-- </div> -->
+                <!-- </div> -->
             </div>
-        <!--</div>-->
+        </div>
     </div>
-    
-    <ul class="sortable" id="myUL">
-        <li>Feed the cat.</li>
-        <li>Mow the lawn.</li>
-        <li>Take medicine.</li>
-        <li>Fix car.</li>
-        <li>Buy clothes.</li>
-    </ul>
+    <div class="container">
+        <ul class="list" id="myUL">
+            <li>Feed the cat.</li>
+            <li>Mow the lawn.</li>
+            <li>Take medicine.</li>
+            <li>Fix car.</li>
+            <li>Buy clothes.</li>
+        </ul>
+    </div>
 
     <script src="script.js"></script>
+
+    <!-- Sortable Feature -->
+    <script src="dist/html5sortable.min.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+    <!-- Bootstrap modules -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </body>
 </html>

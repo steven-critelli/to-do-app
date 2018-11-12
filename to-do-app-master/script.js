@@ -76,6 +76,7 @@ function newElement() {
             div.style.display = "none";
         }
     }
+    sortable('.sortable'); //Come back to check this if it doesn't work ( TODO: )
 }
 
 //Adds a "checkmark" symbol when clicking a list item
@@ -87,7 +88,14 @@ list.addEventListener('dblclick', function(ev) {
 }, false);
 
 //Adds sorting functionality (toggle?)
-$( document ).ready(function() {
+sortable('.sortable', { //Needs fixing. See Shopify:draggable ( TODO: )
+    items: '<li>',
+    placeholder: 'placeholder'
+
+});
+
+
+/*$( document ).ready(function() {
     $('.sortable').mousedown(function() {
      $(this).height($(this).height());
     }).mouseup(function() {
@@ -96,4 +104,4 @@ $( document ).ready(function() {
         connectWith: '.sortable',
     placeholder: 'placeholder',
     });
-});
+});*/

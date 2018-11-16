@@ -1,18 +1,9 @@
-//TODO:
-/*set function for setting priority color xxx
-*if not-important == default xxx
-*if important == orange xxx
-*if very-important == red xxx
+//Possible features to add
+/*Add click and drag to reorder
 *
-*Add click and drag to reorder
-*
-*sublists -- i.e. clean bathroom (click, submenu) --> wipe down counters, clean tub
+*Sublists -- i.e. clean bathroom (click, submenu) --> wipe down counters, clean tub
 *
 */
-
-/******
- * Prioritize functionality over style first!!!
- ******/
 
 //Creates "close" button and adds it to each list item
 var myNodeList = document.getElementsByTagName("LI");
@@ -50,15 +41,7 @@ function newElement() {
     }
     document.getElementById("myInput").value = "";
 
-    /* if (selectedValue == "unselected") {
-        if (inputValue ==''){
-            return
-        } else {
-            alert("A priority has not been selected.");
-        }
-    } else if (selectedValue == "normal") {
-        cNodes[cNodes.length-1].style.backgroundColor = "rgb(165, 245, 119)";//green 
-    } else */if (selectedValue == "important") {
+    if (selectedValue == "important") {
         cNodes[cNodes.length-1].style.backgroundColor = "rgb(250, 173, 100)";//orange
     } else if (selectedValue == "very-important") {
         cNodes[cNodes.length-1].style.backgroundColor = "rgb(247, 76, 76)";//red
@@ -76,7 +59,6 @@ function newElement() {
             div.style.display = "none";
         }
     }
-    sortable('.sortable'); //Come back to check this if it doesn't work ( TODO: )
 }
 
 //Adds a "checkmark" symbol when clicking a list item
@@ -86,22 +68,3 @@ list.addEventListener('dblclick', function(ev) {
         ev.target.classList.toggle('checked');
     }
 }, false);
-
-//Adds sorting functionality (toggle?)
-sortable('.sortable', { //Needs fixing. See Shopify:draggable ( TODO: )
-    items: '<li>',
-    placeholder: 'placeholder'
-
-});
-
-
-/*$( document ).ready(function() {
-    $('.sortable').mousedown(function() {
-     $(this).height($(this).height());
-    }).mouseup(function() {
-     $(this).height('auto');
-    }).sortable({
-        connectWith: '.sortable',
-    placeholder: 'placeholder',
-    });
-});*/
